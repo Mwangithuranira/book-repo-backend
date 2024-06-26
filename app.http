@@ -1,0 +1,46 @@
+
+###
+
+GET http://localhost:8000/api/books
+
+
+
+###
+POST http://localhost:8000/api/books
+Content-Type: application/json
+
+{    
+    
+     "title": "Book Title",
+      "author": "Author Name",
+       "authorEmail": "author@example.com",
+       "price": 19.99, 
+       "publicationyear": "2022-01-01", 
+       "genrename": "Fiction"
+   }
+
+
+
+###
+
+PUT http://localhost:8000/api/books/2
+Content-Type: application/json
+
+
+   {    
+    
+     "title": "Book Title",
+      "author": "Author Name",
+       "authorEmail": "author@example.com",
+       "price": 19.99, 
+       "published": "2022-01-01", 
+       "genrename": "Fiction",
+        "targetedgroup": "Adults",
+       "reader_id": 1
+   }
+
+
+
+###
+
+DELETE http://localhost:8000/api/books/1
