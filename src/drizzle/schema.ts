@@ -15,7 +15,6 @@ export const bookTable = pgTable('book', {
     id: serial('id').primaryKey(),
     title: varchar('title', { length: 100 }),
     author: varchar('author', { length: 100 }),
-    
     publicationyear: date('published'),
 
     
