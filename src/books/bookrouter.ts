@@ -1,13 +1,13 @@
 import { Hono } from 'hono';
-import { createBookHandler, getBooksHandler, getBookByIdHandler, updateBookHandler, deleteBookHandler } from '../books/bookcontroller';
+import { listBooks, getBookById, createBook, updateBook, deleteBook } from './bookcontroller';
 
-const bookRouter = new Hono();
+const router = new Hono();
 
-bookRouter.post('/books', createBookHandler);
-bookRouter.get('/books', getBooksHandler);
-bookRouter.get('/books/:id', getBookByIdHandler);
-bookRouter.put('/books/:id', updateBookHandler);
-bookRouter.delete('/books/:id', deleteBookHandler);
+router.get('/books', listBooks);
+router.get('/books/:id', getBookById);
+router.post('/books', createBook);
+router.put('/books/:id', updateBook);
+router.delete('/books/:id', deleteBook);
 
-export default bookRouter;
+export default router;
 
