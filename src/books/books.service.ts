@@ -30,15 +30,7 @@ export const getBooksService = async (limit?: number): Promise<TUbook[] | null> 
     if (limit) {
         return await db.query.bookTable.findMany({ limit });
     }
-    return await db.query.bookTable.findMany(
-        // {
-        //    columns:{
-        //      title:true,
-        //      author:true,
-        //      publicationyear:true
-        //    } 
-        // }
-    );
+    return await db.query.bookTable.findMany();
 };
 
 export const getBookByIdService = async (id: number): Promise<TUbook | undefined> => {

@@ -15,10 +15,9 @@ export const bookTable = pgTable('book', {
     id: serial('id').primaryKey(),
     title: varchar('title', { length: 100 }),
     author: varchar('author', { length: 100 }),
-    authorEmail: varchar('authorEmail', { length: 100 }),
-    price: decimal('price'),
+    
     publicationyear: date('published'),
-    genrename: varchar('genrename', { length: 100 }),
+
     
    
 });
