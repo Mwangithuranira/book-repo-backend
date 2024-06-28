@@ -34,7 +34,9 @@ export const createBook = async (c: Context) => {
     try {
         const book = await c.req.json();
         const createdBook = await createbookService(book);
-
+          const year=Number(book.publicationyear);
+          book.publicationyear=year;
+          
         if (!createdBook) return c.text("Book not created", 404);
         return c.json({ msg: createdBook }, 201);
 
