@@ -1,5 +1,6 @@
 import { pgTable, serial, text, varchar, integer, decimal, date } from 'drizzle-orm/pg-core';
 import { relations } from 'drizzle-orm';
+import { year } from 'drizzle-orm/mysql-core';
 
 // Define the reader table
 export const readerTable = pgTable('reader', {
@@ -15,7 +16,7 @@ export const bookTable = pgTable('book', {
     id: serial('id').primaryKey(),
     title: varchar('title', { length: 100 }),
     author: varchar('author', { length: 100 }),
-    publicationyear: date('published'),
+    publicationyear: decimal('published' ),
 
     
    
